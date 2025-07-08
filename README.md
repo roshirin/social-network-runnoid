@@ -37,6 +37,7 @@ You can view and interact with the live deployment here:
 -   **Follow System:** Users can follow and unfollow other users, with follower/following counts displayed on the profile.
 
 ### 4. Responsive UI/UX
+-   **Light and dark theme:** Supports two basic color themes for user to choose.
 -   **Responsive Design:** The layout is fully responsive, providing an optimal experience on desktop, tablet, and mobile devices.
 -   **Intuitive Modals:** Actions like editing a profile or viewing comments are handled in non-disruptive modals.
 
