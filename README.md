@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# runnoid - A Full-Stack Social Network
 
-## Getting Started
+runnoid is a full-stack social networking application built with Next.js.
 
-First, run the development server:
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔴 Live Demo
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can view and interact with the live deployment here:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**[https://social-network-runnoid-v91k.vercel.app/](https://social-network-runnoid-v91k.vercel.app/)**
 
-## Learn More
+## ✨ Key Features
 
-To learn more about Next.js, take a look at the following resources:
+### 1. Authentication
+-   **Email & Password Login:** Secure user registration and sign-in functionality.
+-   **Google OAuth:** Seamless one-click sign-in and registration using Google accounts.
+-   **Protected Routes:** User-specific pages and actions are protected, redirecting unauthenticated users to the login page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. Core Social Feed
+-   **Create Posts:** Authenticated users can create and publish text-based posts into common feed.
+-   **Image Uploads:** Users can upload images to their posts (used Uploadthing service for image hosting).
+-   **Chronological Feed:** The main dashboard displays a feed of posts from all users.
+-   **Like Posts:** Users can like any post, with real-time updates to the like count.
+-   **Commenting System:** Users can comment on posts.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. User Profiles
+-   **Customizable Profiles:** Users can edit their profile to change their name, username, and bio.
+-   **User-Specific Content Tabs:** Profile pages are organized with tabs to view a user's:
+    -   Posts
+    -   Likes
+-   **Follow System:** Users can follow and unfollow other users, with follower/following counts displayed on the profile.
 
-## Deploy on Vercel
+### 4. Responsive UI/UX
+-   **Responsive Design:** The layout is fully responsive, providing an optimal experience on desktop, tablet, and mobile devices.
+-   **Intuitive Modals:** Actions like editing a profile or viewing comments are handled in non-disruptive modals.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Technology Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   **Framework:** [Next.js](https://nextjs.org/) (App Router)
+-   **Language:** [TypeScript](https://www.typescriptlang.org/)
+-   **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+-   **UI Components:** [Shadcn/UI](https://ui.shadcn.com/)
+-   **Icons:** [Lucide React](https://lucide.dev/)
+-   **Authentication:** [Clerk](https://clerk.com/)
+-   **ORM:** [Prisma](https://www.prisma.io/)
+-   **Images hosting:** [Uploadthing](https://uploadthing.com/)
+-   **Database:** [PostgreSQL with Neon](https://neon.com/)
+-   **Deployment:** [Vercel](https://vercel.com/)
+
+## 🚀 Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+-   Node.js (v18.x or later)
+-   npm, yarn, or pnpm
+-   A database instance (e.g., PostgreSQL)
+
+### Installation
+
+1.  **Clone the repository:**
+    ```sh
+    git clone https://github.com/roshirin/social-network-runnoid.git
+    cd social-network-runnoid
+    ```
+
+2.  **Install dependencies:**
+    ```sh
+    npm install
+    ```
+
+3.  **Set up environment variables:**
+    Create a `.env` file in the root of your project and add the necessary environment variables. See the `.env_example` file.
+
+4.  **Push the database schema:**
+    Use Prisma to sync your schema with your database.
+    ```sh
+    npx prisma db push
+    ```
+
+5.  **Run the development server:**
+    ```sh
+    npm run dev
+    ```
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
